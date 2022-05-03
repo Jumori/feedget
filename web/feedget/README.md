@@ -56,7 +56,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/)
 
 
-### Rodando a aplicação mobile
+### Rodando a aplicação web
 
 ```bash
 
@@ -84,7 +84,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[Tailwind](https://tailwindcss.com/)**
 -   **[Headless UI](https://headlessui.dev/)**
 
-> Veja o arquivo  [package.json](https://github.com/Jumori/feedget/blob/master/package.json)
+> Veja o arquivo  [package.json](https://github.com/Jumori/feedget/blob/master/web/feedget/package.json)
 
 
 ## 🦸 Autora
