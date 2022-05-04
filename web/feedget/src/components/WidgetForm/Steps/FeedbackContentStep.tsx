@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FormEvent, useState } from 'react'
 import { Header } from '../Header/Index'
 import { FeedbackType, feedbackTypes } from '../Index'
 import { ScreenshotButton } from '../ScreenshotButton'
@@ -13,8 +13,18 @@ export function FeedbackContentStep({
   onFeedbackRestartRequested
 }: FeedbackContentStepProps) {
   const [screenshot, setScreenshot] = useState<string | null>(null)
+  const [comment, setComment] = useState('')
 
   const feedbackTypeInfo = feedbackTypes[feedbackType]
+
+  const handleSubmitFeedback = (event: FormEvent) => {
+    event.preventDefault()
+
+    console.log({
+      screenshot,
+      comment
+    })
+  }
 
   return (
     <>
@@ -25,7 +35,7 @@ export function FeedbackContentStep({
         handleReturn={onFeedbackRestartRequested}
       />
 
-      <form className="my-4 w-full">
+      <form className="my-4 w-full" onSubmit={handleSubmitFeedback}>
         <textarea
           className="
             min-w-[340px]
@@ -47,6 +57,7 @@ export function FeedbackContentStep({
             scrollbar-thin
           "
           placeholder="Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo..."
+          onChange={event => setComment(event.target.value)}
         />
 
         <footer className="flex gap-2 mt-2">
@@ -57,6 +68,7 @@ export function FeedbackContentStep({
 
           <button
             type="submit"
+            disabled={comment.length === 0}
             className="
               p-2
               bg-brand-500
@@ -74,6 +86,8 @@ export function FeedbackContentStep({
               focus:ring-offset-zinc-900
               focus:ring-brand-500
               transition-colors
+              disabled:opacity-50
+              disabled:hover:bg-brand-500
             "
           >
             Enviar feedback
