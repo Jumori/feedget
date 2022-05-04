@@ -1,4 +1,5 @@
 import React from 'react'
+import { Camera } from 'phosphor-react'
 import { Header } from '../Header/Index'
 import { FeedbackType, feedbackTypes } from '../Index'
 
@@ -39,9 +40,57 @@ export function FeedbackContentStep({
             focus:ring-1
             focus:outline-none
             resize-none
+            scrollbar-thumb-zinc-700
+            scrollbar-track-transparent
+            scrollbar-thin
           "
           placeholder="Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo..."
-        ></textarea>
+        />
+
+        <footer className="flex gap-2 mt-2">
+          <button
+            type="button"
+            className="
+              p-2
+              bg-zinc-800
+              rounded-md
+              border-transparent
+              hover:bg-zinc-700
+              transition-colors
+              focus:outline-none
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-offset-zinc-900
+              focus:ring-brand-500
+            "
+          >
+            <Camera className="2-6 h-6" />
+          </button>
+
+          <button
+            type="submit"
+            className="
+              p-2
+              bg-brand-500
+              rounded-md
+              border-transparent
+              flex-1
+              flex
+              justify-center
+              items-center
+              text-sm
+              hover:bg-brand-300
+              focus:outline-none
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-offset-zinc-900
+              focus:ring-brand-500
+              transition-colors
+            "
+          >
+            Enviar feedback
+          </button>
+        </footer>
       </form>
     </>
   )
