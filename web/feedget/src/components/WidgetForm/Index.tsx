@@ -5,6 +5,7 @@ import { FeedbackContentStep } from './Steps/FeedbackContentStep'
 import bugImageUrl from '../../assets/bug.svg'
 import ideaImageUrl from '../../assets/idea.svg'
 import thoughtImageUrl from '../../assets/thought.svg'
+import { FeedbackSuccessStep } from './Steps/FeedbackSuccessStep'
 
 export const feedbackTypes = {
   bug: {
@@ -34,8 +35,10 @@ export type FeedbackType = keyof typeof feedbackTypes
 
 export function WidgetForm() {
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null)
+  const [feedbackSent, setFeedbackSent] = useState(false)
 
   const handleRestartFeedback = () => {
+    setFeedbackSent(false)
     setFeedbackType(null)
   }
 
@@ -55,13 +58,22 @@ export function WidgetForm() {
         md:w-auto
       "
     >
-      {!feedbackType ? (
-        <FeedbackTypeStep onFeedbackTypeChanged={setFeedbackType} />
-      ) : (
-        <FeedbackContentStep
-          feedbackType={feedbackType}
+      {feedbackSent ? (
+        <FeedbackSuccessStep
           onFeedbackRestartRequested={handleRestartFeedback}
         />
+      ) : (
+        <>
+          {!feedbackType ? (
+            <FeedbackTypeStep onFeedbackTypeChanged={setFeedbackType} />
+          ) : (
+            <FeedbackContentStep
+              feedbackType={feedbackType}
+              onFeedbackRestartRequested={handleRestartFeedback}
+              onFeedbackSent={() => setFeedbackSent(true)}
+            />
+          )}
+        </>
       )}
 
       <footer className="text-xs text-neutral-400">
