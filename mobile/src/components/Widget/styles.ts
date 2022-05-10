@@ -4,7 +4,7 @@ import { theme } from '../../theme'
 
 export const styles = StyleSheet.create({
   button: {
-    weight: 48,
+    width: 48,
     height: 48,
     borderRadius: 24,
     backgroundColor: theme.colors.brand,
