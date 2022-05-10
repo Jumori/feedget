@@ -4,8 +4,11 @@ import { View, TextInput, Image, Text, TouchableOpacity } from 'react-native'
 
 import { styles } from './styles'
 import { theme } from '../../theme'
-import { FeedbackType } from '../Widget'
 import { feedbackTypes } from '../../utils/feedbackTypes'
+
+import { FeedbackType } from '../Widget'
+import { ScreenshotButton } from '../ScreenshotButton'
+import { Button } from '../Button'
 
 interface Props {
   feedbackType: FeedbackType
@@ -27,7 +30,7 @@ export function Form({ feedbackType }: Props) {
 
         <View style={styles.titleContainer}>
           <Image source={feedbackTypeInfo.image} style={styles.image} />
-          <Text style={styles.titleText}>{feedbackTypeInfo}</Text>
+          <Text style={styles.titleText}>{feedbackTypeInfo.title}</Text>
         </View>
       </View>
 
@@ -37,6 +40,15 @@ export function Form({ feedbackType }: Props) {
         placeholder="Queremos te ouvir. O que você gostaria de nos dizer?"
         placeholderTextColor={theme.colors.text_secondary}
       />
+
+      <View style={styles.footer}>
+        <ScreenshotButton
+          onTakeShot={() => {}}
+          onRemoveShot={() => {}}
+          screenshot=""
+        />
+        <Button isLoading={false} />
+      </View>
     </View>
   )
 }
