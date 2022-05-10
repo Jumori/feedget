@@ -9,6 +9,7 @@ import { feedbackTypes } from '../../utils/feedbackTypes'
 import { FeedbackType } from '../Widget'
 import { ScreenshotButton } from '../ScreenshotButton'
 import { Button } from '../Button'
+import { Copyright } from '../Copyright'
 
 interface Props {
   feedbackType: FeedbackType
@@ -49,6 +50,8 @@ export function Form({ feedbackType }: Props) {
         />
         <Button isLoading={false} />
       </View>
+
+      <Copyright />
     </View>
   )
 }
