@@ -1,8 +1,6 @@
 import axios from 'axios'
-import { BASE_URL } from 'react-native-dotenv'
-
-console.log(process.env)
+import { API_URL } from '@env'
 
 export const api = axios.create({
-  baseURL: process.env.BASE_URL
+  baseURL: API_URL
 })
