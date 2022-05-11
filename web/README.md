@@ -36,6 +36,8 @@ Feedback Widget - O widget para feedback de usuários da sua aplicação!
 
 Entenda melhor o que os seus usuários pensam sobre sua aplicação web ou mobile com o Feedback Widget!
 
+Acesse o nosso [demo online](https://feedget-web-roan.vercel.app/).
+
 ## 🎨 Layout
 
 O layout da aplicação está disponível no Figma:
@@ -64,7 +66,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 $ git clone git@github.com:Jumori/feedget.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd web/feedget
+$ cd web
 
 # Instale as dependências
 $ yarn install
@@ -83,8 +85,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[Vite](https://vitejs.dev/)**
 -   **[Tailwind](https://tailwindcss.com/)**
 -   **[Headless UI](https://headlessui.dev/)**
+-   **[Axios](https://axios-http.com/)**
 
-> Veja o arquivo  [package.json](https://github.com/Jumori/feedget/blob/master/web/feedget/package.json)
+> Veja o arquivo  [package.json](https://github.com/Jumori/feedget/blob/master/web/package.json)
 
 
 ## 🦸 Autora
