@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Feedback Widget" src=".github/Mobile.svg" width="350px" align="center">
+  <img alt="Feedback Widget" src=".github/Desktop.svg" width="500px" align="center">
 </p>
 
 <h1 align="center">
@@ -20,10 +20,10 @@ Tabela de conteúdos
 =================
 <!--ts-->
    * [Sobre o projeto](#-sobre-o-projeto)
-   * [Layout](#-layout)
+   * [Endpoints](#-endpoints)
    * [Como executar o projeto](#-como-executar-o-projeto)
      * [Pré-requisitos](#pré-requisitos)
-     * [Rodando a aplicação](#rodando-a-aplicação)
+     * [Rodando a aplicação](#rodando-a-aplicação-backend)
    * [Tecnologias](#-tecnologias)
    * [Autora](#-autora)
    * [Licença](#user-content--licença)
@@ -38,49 +38,46 @@ Entenda melhor o que os seus usuários pensam sobre sua aplicação web ou mobil
 
 Acesse o nosso [demo online](https://feedget-web-roan.vercel.app/).
 
-## 🎨 Layout
+## 🔩 Endpoints
 
-O layout da aplicação está disponível no Figma:
 
-<a href="https://www.figma.com/file/0EE0HrWV8NLILbF3yIAYdJ/Feedback-Widget-Community">
-  <img alt="Figma" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
-</a>
+| Método | Endpoint   | Body                                        |
+|--------|------------|---------------------------------------------|
+| POST   | /feedbacks |  `{"type": "", comment: "", screenshot: ""}`|
 
 ## 🚀 Como executar o projeto
 
-Esta aplicação conta com três partes: [frontend web](https://github.com/Jumori/feedget/tree/master/web), [mobile](https://github.com/Jumori/feedget/tree/master/mobile) e [backend](https://github.com/Jumori/feedget/tree/master/server).
+Esta aplicação conta com três partes: frontend web, mobile e backend.
 
+Neste diretório estaremos lidando com a parte do backend.
 
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/), [Expo](https://expo.dev/)
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/)
 
 
-### Rodando a aplicação
-Acesse os diretórios de frontend web, mobile ou backend para maiores detalhes de como rodar sua a aplicação.
+### Rodando a aplicação backend
+
+```bash
+
+# Clone este repositório
+$ git clone git@github.com:Jumori/feedget.git
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd server
+
+# Instale as dependências
+$ yarn install
+
+# Inicie a aplicação no ambiente de desenvolvimento
+$ yarn dev
+
+```
 
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
-
-#### **Frontend Web**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[Vite](https://vitejs.dev/)**
--   **[Tailwind](https://tailwindcss.com/)**
--   **[Headless UI](https://headlessui.dev/)**
--   **[Axios](https://axios-http.com/)**
-
-> Veja o arquivo  [package.json](https://github.com/Jumori/feedget/blob/master/web/package.json)
-
-
-#### **Frontend Mobile**  ([React Native](https://reactnative.dev/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[Expo](https://expo.dev/)**
--   **[Axios](https://axios-http.com/)**
-
-> Veja o arquivo  [package.json](https://github.com/Jumori/feedget/blob/master/mobile/package.json)
-
 
 #### **Backend**  ([Node.js](https://nodejs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
 
@@ -107,6 +104,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 📝 Licença
 
-Este projeto esta sob a licença [MIT](../../LICENSE).
+Este projeto esta sob a licença [MIT](../LICENSE).
 
 Feito com ❤️ por Juliana Morikoshi 👋 [Entre em contato!](https://www.linkedin.com/in/julianamorikoshi/)

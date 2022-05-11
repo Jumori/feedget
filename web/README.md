@@ -23,7 +23,7 @@ Tabela de conteúdos
    * [Layout](#-layout)
    * [Como executar o projeto](#-como-executar-o-projeto)
      * [Pré-requisitos](#pré-requisitos)
-     * [Rodando a aplicação](#rodando-a-aplicação-mobile)
+     * [Rodando a aplicação](#rodando-a-aplicação-web)
    * [Tecnologias](#-tecnologias)
    * [Autora](#-autora)
    * [Licença](#user-content--licença)
@@ -105,6 +105,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 📝 Licença
 
-Este projeto esta sob a licença [MIT](../../LICENSE).
+Este projeto esta sob a licença [MIT](../LICENSE).
 
 Feito com ❤️ por Juliana Morikoshi 👋 [Entre em contato!](https://www.linkedin.com/in/julianamorikoshi/)

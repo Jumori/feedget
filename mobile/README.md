@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Feedback Widget" src=".github/Mobile.svg" width="350px" align="center">
+  <img alt="Feedback Widget" src=".github/Mobile.svg" width="250px" align="center">
 </p>
 
 <h1 align="center">
@@ -23,7 +23,7 @@ Tabela de conteúdos
    * [Layout](#-layout)
    * [Como executar o projeto](#-como-executar-o-projeto)
      * [Pré-requisitos](#pré-requisitos)
-     * [Rodando a aplicação](#rodando-a-aplicação)
+     * [Rodando a aplicação](#rodando-a-aplicação-mobile)
    * [Tecnologias](#-tecnologias)
    * [Autora](#-autora)
    * [Licença](#user-content--licença)
@@ -36,8 +36,6 @@ Feedback Widget - O widget para feedback de usuários da sua aplicação!
 
 Entenda melhor o que os seus usuários pensam sobre sua aplicação web ou mobile com o Feedback Widget!
 
-Acesse o nosso [demo online](https://feedget-web-roan.vercel.app/).
-
 ## 🎨 Layout
 
 O layout da aplicação está disponível no Figma:
@@ -48,8 +46,9 @@ O layout da aplicação está disponível no Figma:
 
 ## 🚀 Como executar o projeto
 
-Esta aplicação conta com três partes: [frontend web](https://github.com/Jumori/feedget/tree/master/web), [mobile](https://github.com/Jumori/feedget/tree/master/mobile) e [backend](https://github.com/Jumori/feedget/tree/master/server).
+Esta aplicação conta com três partes: frontend web, mobile e backend.
 
+Neste diretório estaremos lidando com a parte do frontend mobile.
 
 ### Pré-requisitos
 
@@ -57,22 +56,27 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/), [Expo](https://expo.dev/)
 
 
-### Rodando a aplicação
-Acesse os diretórios de frontend web, mobile ou backend para maiores detalhes de como rodar sua a aplicação.
+### Rodando a aplicação mobile
+
+```bash
+
+# Clone este repositório
+$ git clone git@github.com:Jumori/feedget.git
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd mobile
+
+# Instale as dependências
+$ yarn install
+
+# Inicie a aplicação no ambiente de desenvolvimento
+$ expo start
+
+```
 
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
-
-#### **Frontend Web**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[Vite](https://vitejs.dev/)**
--   **[Tailwind](https://tailwindcss.com/)**
--   **[Headless UI](https://headlessui.dev/)**
--   **[Axios](https://axios-http.com/)**
-
-> Veja o arquivo  [package.json](https://github.com/Jumori/feedget/blob/master/web/package.json)
-
 
 #### **Frontend Mobile**  ([React Native](https://reactnative.dev/)  +  [TypeScript](https://www.typescriptlang.org/))
 
@@ -80,16 +84,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[Axios](https://axios-http.com/)**
 
 > Veja o arquivo  [package.json](https://github.com/Jumori/feedget/blob/master/mobile/package.json)
-
-
-#### **Backend**  ([Node.js](https://nodejs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[Prisma](https://www.prisma.io/)**
--   **[Axios](https://axios-http.com/)**
--   **[Jest](https://jestjs.io/)**
--   **[Nodemailer](https://nodemailer.com/about/)**
-
-> Veja o arquivo  [package.json](https://github.com/Jumori/feedget/blob/master/server/package.json)
 
 
 ## 🦸 Autora
@@ -107,6 +101,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 📝 Licença
 
-Este projeto esta sob a licença [MIT](../../LICENSE).
+Este projeto esta sob a licença [MIT](../LICENSE).
 
 Feito com ❤️ por Juliana Morikoshi 👋 [Entre em contato!](https://www.linkedin.com/in/julianamorikoshi/)
