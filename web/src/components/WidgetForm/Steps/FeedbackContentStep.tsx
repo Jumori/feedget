@@ -1,6 +1,8 @@
 import React, { FormEvent, useState } from 'react'
+import { api } from '../../../services/api'
 import { Header } from '../Header/Index'
 import { FeedbackType, feedbackTypes } from '../Index'
+import { Loading } from '../Loading'
 import { ScreenshotButton } from '../ScreenshotButton'
 
 interface FeedbackContentStepProps {
@@ -16,18 +18,27 @@ export function FeedbackContentStep({
 }: FeedbackContentStepProps) {
   const [screenshot, setScreenshot] = useState<string | null>(null)
   const [comment, setComment] = useState('')
+  const [isSendingFeedback, setIsSendingFeedback] = useState(false)
 
   const feedbackTypeInfo = feedbackTypes[feedbackType]
 
-  const handleSubmitFeedback = (event: FormEvent) => {
-    event.preventDefault()
+  const handleSubmitFeedback = async (event: FormEvent) => {
+    try {
+      event.preventDefault()
 
-    console.log({
-      screenshot,
-      comment
-    })
+      setIsSendingFeedback(true)
+      await api.post('/feedbacks', {
+        type: feedbackType,
+        comment,
+        screenshot
+      })
 
-    onFeedbackSent()
+      setIsSendingFeedback(false)
+      onFeedbackSent()
+    } catch (error) {
+      console.log(error)
+      setIsSendingFeedback(false)
+    }
   }
 
   return (
@@ -72,7 +83,7 @@ export function FeedbackContentStep({
 
           <button
             type="submit"
-            disabled={comment.length === 0}
+            disabled={comment.length === 0 || isSendingFeedback}
             className="
               p-2
               bg-brand-500
@@ -94,7 +105,7 @@ export function FeedbackContentStep({
               disabled:hover:bg-brand-500
             "
           >
-            Enviar feedback
+            {isSendingFeedback ? <Loading /> : 'Enviar feedback'}
           </button>
         </footer>
       </form>
